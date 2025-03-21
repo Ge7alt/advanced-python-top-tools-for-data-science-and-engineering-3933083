@@ -1,5 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Advanced Python: Top Tools for Data Science and Engineering
+This is the repository for the LinkedIn Learning course `Advanced Python: Top Tools for Data Science and Engineering`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
