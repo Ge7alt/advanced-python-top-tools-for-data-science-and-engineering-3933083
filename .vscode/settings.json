@@ -15,7 +15,7 @@
   "emmet.triggerExpansionOnTab": true,
   "files.autoSave": "afterDelay",
   "terminal.integrated.fontSize": 18,
-  "workbench.colorTheme": "Visual Studio Light",
+  "workbench.colorTheme": "LinkedIn Learning Light",
   "workbench.fontAliasing": "antialiased",
   "workbench.statusBar.visible": true
 }
