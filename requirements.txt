@@ -4,3 +4,5 @@ polars
 faker
 matplotlib
 seaborn
+openpyxl
+fastexcel
