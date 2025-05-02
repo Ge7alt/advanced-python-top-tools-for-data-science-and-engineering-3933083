@@ -29,7 +29,7 @@ plt.style.use("fivethirtyeight")
 ax.plot(df['Month'], df['SalesAmount'])
 ax.plot(df['Month'], df['Profits'])
 
-# Plot the data as a bar chart
+# Plot the data as a bar chart with some customization
 # ax.bar(df['Month'], df['SalesAmount'])
 # ax.bar(df['Month'], df['Profits'])
 
@@ -42,6 +42,9 @@ ax.set_ylabel("Amount")
 
 # add the legend
 ax.legend(['Sales', 'Profits'])
+
+# add a watermark
+
 
 # Show the result
 plt.show()

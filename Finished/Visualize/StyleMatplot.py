@@ -17,18 +17,23 @@ df = pd.DataFrame(data)
 
 # Create a figure and axes 
 fig, ax = plt.subplots()
+fig.set_size_inches(12, 8)
 
 # Customize the plot appearance
 plt.style.use("fivethirtyeight")
 
 # Plot the data as a line chart with some customization
-ax.plot(df['Month'], df['SalesAmount'], color='green', linestyle='--',marker='o',
-        markersize=10, markerfacecolor='white')
-ax.plot(df['Month'], df['Profits'])
+# ax.plot(df['Month'], df['SalesAmount'], color='green', linestyle='--',marker='o',
+#         markersize=10, markerfacecolor='white')
+# ax.plot(df['Month'], df['Profits'])
 
-# Plot the data as a bar chart
-# ax.bar(df['Month'], df['SalesAmount'])
-# ax.bar(df['Month'], df['Profits'])
+# Plot the data as a bar chart with some customization
+bars = ax.bar(df['Month'], df['SalesAmount'], edgecolor='black',linewidth=2)
+ax.bar(df['Month'], df['Profits'], edgecolor='black',linewidth=2)
+for bar in bars:
+    height = bar.get_height()
+    ax.text(bar.get_x() + bar.get_width()/2., height + 1,
+            f'{height}', ha='center', va='bottom')
 
 # Set the chart properties
 ax.set_title("Sales and Profits")
@@ -43,6 +48,10 @@ ax.yaxis.set_major_formatter(FuncFormatter(currency_formatter))
 
 # add the legend
 ax.legend(['Sales', 'Profits'])
+
+# Add a watermark
+fig.text(0.5, 0.5, 'SAMPLE DATA', fontsize=70, color='gray',
+         ha='center', va='center', alpha=0.7, rotation=30)
 
 # show the result
 plt.show()
