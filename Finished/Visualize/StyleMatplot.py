@@ -21,13 +21,14 @@ fig, ax = plt.subplots()
 # Customize the plot appearance
 plt.style.use("fivethirtyeight")
 
-# Plot the data as a line chart
-# ax.plot(df['Month'], df['SalesAmount'])
-# ax.plot(df['Month'], df['Profits'])
+# Plot the data as a line chart with some customization
+ax.plot(df['Month'], df['SalesAmount'], color='green', linestyle='--',marker='o',
+        markersize=10, markerfacecolor='white')
+ax.plot(df['Month'], df['Profits'])
 
 # Plot the data as a bar chart
-ax.bar(df['Month'], df['SalesAmount'])
-ax.bar(df['Month'], df['Profits'])
+# ax.bar(df['Month'], df['SalesAmount'])
+# ax.bar(df['Month'], df['Profits'])
 
 # Set the chart properties
 ax.set_title("Sales and Profits")

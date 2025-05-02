@@ -25,14 +25,13 @@ plt.style.use("fivethirtyeight")
 # ax.plot(df['Month'], df['SalesAmount'])
 # ax.plot(df['Month'], df['Profits'])
 
-# Plot the data as a line chart
-# Use a different line style and add markers
-# ax.plot(df['Month'], df['SalesAmount'])
-# ax.plot(df['Month'], df['Profits'])
+# Plot the data as a line chart with some customization
+ax.plot(df['Month'], df['SalesAmount'])
+ax.plot(df['Month'], df['Profits'])
 
 # Plot the data as a bar chart
-ax.bar(df['Month'], df['SalesAmount'])
-ax.bar(df['Month'], df['Profits'])
+# ax.bar(df['Month'], df['SalesAmount'])
+# ax.bar(df['Month'], df['Profits'])
 
 # Set the chart properties
 ax.set_title("Sales and Profits")
