@@ -15,29 +15,22 @@ data = {
 df = pd.DataFrame(data)
 
 # Examine a subset of the data
-df.head()
+
 
 # Create a basic plot
 # Use the subplots function to create an axes and a figure
-fig, ax = plt.subplots()
+
 
 # Customize the plot appearance
-plt.style.use("grayscale")
+
 
 # Plot the data as a line chart
-ax.plot(df['Month'], df['SalesAmount'])
-ax.plot(df['Month'], df['Profits'])
+
 
 # Plot the data as a bar chart
-# ax.bar(df['Month'], df['SalesAmount'])
-# ax.bar(df['Month'], df['Profits'])
+
 
 # Set the chart properties
-ax.set_title("Sales and Profits")
-ax.set_xlabel("Month")
-ax.set_ylabel("Amount")
 
-ax.legend(['Sales', 'Profits'])
 
 # Show the result
-plt.show()
