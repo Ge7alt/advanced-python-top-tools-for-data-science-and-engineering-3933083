@@ -2,6 +2,7 @@
 # Using the Polars library create and access a DataFrame
 
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
 import pandas as pd
 
 # Create a dataset for sales data
@@ -20,6 +21,10 @@ fig, ax = plt.subplots()
 # Customize the plot appearance
 plt.style.use("fivethirtyeight")
 
+# Plot the data as a line chart
+# ax.plot(df['Month'], df['SalesAmount'])
+# ax.plot(df['Month'], df['Profits'])
+
 # Plot the data as a bar chart
 ax.bar(df['Month'], df['SalesAmount'])
 ax.bar(df['Month'], df['Profits'])
@@ -29,8 +34,14 @@ ax.set_title("Sales and Profits")
 ax.set_xlabel("Month")
 ax.set_ylabel("Amount")
 
+#define a custom formatter for the y axis
+def currency_formatter(x, pos):
+    return f'${int(x)}'
+
+ax.yaxis.set_major_formatter(FuncFormatter(currency_formatter))
+
+# add the legend
 ax.legend(['Sales', 'Profits'])
 
-# Set line styles
-
+# show the result
 plt.show()

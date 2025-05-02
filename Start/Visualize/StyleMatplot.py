@@ -14,20 +14,35 @@ data = {
 # Create a DataFrame from the data object
 df = pd.DataFrame(data)
 
-# Create a figure and axes 
+# Create a basic plot
+# Use the subplots function to create an axes and a figure
 fig, ax = plt.subplots()
 
-# Set the chart title and labels
-ax.set_title("Dow Jones Stock Values")
-ax.set_xlabel("Date")
-ax.set_ylabel("Value")
+# Customize the plot appearance
+plt.style.use("fivethirtyeight")
 
-# Add the data series
+# Plot the data as a line chart
+# ax.plot(df['Month'], df['SalesAmount'])
+# ax.plot(df['Month'], df['Profits'])
 
+# Plot the data as a line chart
+# Use a different line style and add markers
+# ax.plot(df['Month'], df['SalesAmount'])
+# ax.plot(df['Month'], df['Profits'])
 
-# Add a legend to the chart
+# Plot the data as a bar chart
+ax.bar(df['Month'], df['SalesAmount'])
+ax.bar(df['Month'], df['Profits'])
 
+# Set the chart properties
+ax.set_title("Sales and Profits")
+ax.set_xlabel("Month")
+ax.set_ylabel("Amount")
 
-# Set line styles
+#define a custom formatter for the y axis
 
+# add the legend
+ax.legend(['Sales', 'Profits'])
+
+# Show the result
 plt.show()
