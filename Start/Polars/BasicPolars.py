@@ -12,25 +12,30 @@ data = {
 }
 
 # 1. Create a DataFrame from the data object
+df = pl.DataFrame(data)
+# print(df)
 
-
-# 2. Get information about the DataFrame
-
+# # 2. Get information about the DataFrame
+# print(df.schema)
+# print(df.shape)
+# print(df.columns)
+# print(df.describe())
 
 # 3. Accessing specific columns
-
+print(df.select('Product', 'SalesAmount'))
 
 # 4. Adding a new column for Discounted Sales (10% discount)
-
-
+# df = df.with_columns(SalesEuros = pl.col('SalesAmount')*0.96)
+# print(df)
 # 5. Extend a DataFrame with a new row of data
-# new_row = pl.DataFrame({
-#     'Product': ["Laptop"],
-#     'Region': ["West"],
-#     'SalesAmount' : [1400.00],
-#     'Quarter' : ["Q4"],
-#     'Year': [2025]
-# })
-
+new_row = pl.DataFrame({
+    'Product': ["Laptop"],
+    'Region': ["West"],
+    'SalesAmount' : [1400.00],
+    'Quarter' : ["Q4"],
+    'Year': [2025]
+})
+# df.extend(new_row)
 
 # 6. Select a set of rows using the slice() method
+print(df.slice(1, 3))

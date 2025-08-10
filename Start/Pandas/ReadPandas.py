@@ -6,7 +6,7 @@ import pandas as pd
 
 
 # 1. Read data from a CSV file and describe the DataFrame
-
+df = pd.read_csv('sales_data.csv')
 
 # 2. Use only a subset of the columns
 

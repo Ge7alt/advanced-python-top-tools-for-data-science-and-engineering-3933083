@@ -12,6 +12,13 @@ data = {
 }
 
 # 1. Create a DataFrame from the data object
-
+df = pl.LazyFrame(data)
+print(df)
 
 # 2. Create a query and use the explain() function to see what's going to happen
+query = (
+  pl.scan_csv('sales_data.csv').filter(pl.col("Quarter")!= 'Q3')
+)
+print(query.explain())
+
+pl.sca
